@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+#Thanks to firatakandere on github for this script
+
 import dbus
 import os
 import sys
