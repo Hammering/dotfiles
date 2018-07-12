@@ -49,6 +49,7 @@ font pango:DejaVu Sans Mono 8
 # start a terminal
 bindsym $mod+Return exec $editor 
 bindsym $mod+p exec passmenu
+bindsym Print exec ~/.custom/screenshot.sh
 
 # kill focused window
 bindsym $mod+c kill
@@ -93,7 +94,7 @@ for_window [class="EpicGamesLauncher"] floating enable
 
 # Autostart
 # Autostart applications
-exec ~/feh.sh
+exec ~/.custom/bg_script.sh
 exec thunderbird
 #exec qbittorrent
 exec $editor
