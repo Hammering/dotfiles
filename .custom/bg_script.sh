@@ -1,5 +1,5 @@
 #/bin/bash
 while true; do
-	feh --randomize --bg-max ~/Pictures/Wallpapers/*
+	feh --randomize --bg-max ~/Bilder/Wallpapers/*
 	sleep 600
 done
