@@ -56,12 +56,12 @@ bindsym $mod+c kill
 #bindsym $mod+$key1+c kill
 
 # Increse/Decrese backlight
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsyn XF86PowerOff exec 
 
 # lock screen
-bindsym $mod+ctrl+l exec i3lock-fancy
+bindsym $mod+ctrl+l exec i3lock-fancy-dualmonitor 
 
 # Start Applications
 bindsym $mod+f exec thunar
