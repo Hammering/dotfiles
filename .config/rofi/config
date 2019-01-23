@@ -1,2 +1,3 @@
 rofi.terminal:	termite
 rofi.ssh-command:	{terminal} -e "{ssh-client} {host}"
+rofi.theme: /usr/share/rofi/themes/sidebar.rasi
