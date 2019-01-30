@@ -59,6 +59,10 @@ bindsym $mod+c kill
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsyn XF86PowerOff exec 
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+
 
 # lock screen
 bindsym $mod+ctrl+l exec i3lock-fancy-dualmonitor 
