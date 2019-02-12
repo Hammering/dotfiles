@@ -14,6 +14,7 @@ Plugin 'majutsushi/tagbar'
 call vundle#end()
 
 set encoding=utf-8
+set number relativenumber
 
 " YouCompleteMe Keybindings
 let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
