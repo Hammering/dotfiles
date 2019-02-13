@@ -10,6 +10,7 @@ Plugin 'w0rp/ale'
 Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
+Plugin 'lervag/vimtex'
 call vundle#end()
 
 set encoding=utf-8
