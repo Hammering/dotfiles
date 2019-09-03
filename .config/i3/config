@@ -35,6 +35,50 @@ set $transparent #1d202100
 default_border pixel 2
 hide_edge_borders smart
 
+set_from_resource $ws1  i3-wm.workspace.01.name "1"
+set_from_resource $ws2  i3-wm.workspace.02.name "2"
+set_from_resource $ws3  i3-wm.workspace.03.name "3"
+set_from_resource $ws4  i3-wm.workspace.04.name "4"
+set_from_resource $ws5  i3-wm.workspace.05.name "5"
+set_from_resource $ws6  i3-wm.workspace.06.name "6"
+set_from_resource $ws7  i3-wm.workspace.07.name "7"
+set_from_resource $ws8  i3-wm.workspace.08.name "8"
+set_from_resource $ws9  i3-wm.workspace.09.name "9"
+set_from_resource $ws10 i3-wm.workspace.10.name "10"
+set_from_resource $ws11 i3-wm.workspace.11.name "11"
+set_from_resource $ws12 i3-wm.workspace.12.name "12"
+set_from_resource $ws13 i3-wm.workspace.13.name "13"
+set_from_resource $ws14 i3-wm.workspace.14.name "14"
+set_from_resource $ws15 i3-wm.workspace.15.name "15"
+set_from_resource $ws16 i3-wm.workspace.16.name "16"
+set_from_resource $ws17 i3-wm.workspace.17.name "17"
+set_from_resource $ws18 i3-wm.workspace.18.name "18"
+set_from_resource $ws19 i3-wm.workspace.19.name "19"
+
+bindsym $mod+BackSpace split toggle
+bindsym $mod+x move workspace to output right
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+y focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# enter fullscreen mode for the focused container
+bindsym $mod+n fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+s layout stacking
+bindsym $mod+s layout tabbed
+bindsym $mod+a layout toggle split
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
@@ -49,11 +93,11 @@ font pango:DejaVu Sans Mono 8
 # start a terminal
 bindsym $mod+Return exec $editor 
 bindsym $mod+p exec passmenu
+bindsym $mod+Shift+Return exec firefox
 bindsym Print exec ~/.custom/screenshot.sh
 
 # kill focused window
 bindsym $mod+c kill
-#bindsym $mod+$key1+c kill
 
 # Increse/Decrese backlight
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
@@ -63,34 +107,16 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
-
 # lock screen
-bindsym $mod+ctrl+l exec i3lock-fancy-dualmonitor 
+bindsym $mod+ctrl+l exec i3lock-fancy-dualmonitor
 
 # Start Applications
 bindsym $mod+f exec thunar
 
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i'
+bindsym $mod+d exec rofi -modi drun -show drun
 bindsym $mod+Tab exec --no-startup-id rofi -show window 
 bindsym $mod+o exec --no-startup-id rofi -show ssh 
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications shipping a .desktop file. It is a wrapper around dmenu, so you need that installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i'
-
-
-set $WS1 1
-set $WS2 2
-set $WS3 3
-set $WS4 4
-set $WS5 5
-set $WS6 6
-set $WS7 7
-set $WS8 8
-set $WS9 9:Mail
-set $WS10 10
-
-bindsym $mod+x move workspace to output right
 
 #Open applications on specific workspace
 assign [class="Thunderbird"] $WS9
@@ -105,9 +131,9 @@ for_window [class="EpicGamesLauncher"] floating enable
 
 # Autostart
 # Autostart applications
-exec ~/.custom/bg_script.sh
+exec feh --bg-max ~/Bilder/Wallpapers/wallhaven-747309.jpg   
+#exec ~/.custom/bg_script.sh
 exec thunderbird
-#exec qbittorrent
 exec $editor
 
 # change focus
@@ -133,32 +159,6 @@ bindsym $mod+Mod1+Left move left
 bindsym $mod+$key1+Down move down
 bindsym $mod+$key1+Up move up
 bindsym $mod+$key1+Right move right
-
-# split in horizontal orientation
-bindsym $mod+g split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+n fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
-bindsym $mod+s layout tabbed
-bindsym $mod+a layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+$key1+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+y focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
