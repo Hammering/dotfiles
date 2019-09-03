@@ -108,7 +108,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
 # lock screen
-bindsym $mod+ctrl+l exec i3lock-fancy-dualmonitor
+bindsym $mod+ctrl+l exec i3lock-fancy 
 
 # Start Applications
 bindsym $mod+f exec thunar
