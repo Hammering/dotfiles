@@ -3,10 +3,8 @@
 #
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
-#
 
 # i3 config file (v4)
-#
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
@@ -55,8 +53,13 @@ set_from_resource $ws17 i3-wm.workspace.17.name "17"
 set_from_resource $ws18 i3-wm.workspace.18.name "18"
 set_from_resource $ws19 i3-wm.workspace.19.name "19"
 
+focus_on_window_activation none
+
 bindsym $mod+BackSpace split toggle
-bindsym $mod+x move workspace to output right
+bindsym $mod+Shift+k move workspace to output up
+bindsym $mod+Shift+j move workspace to output down
+bindsym $mod+Shift+h move workspace to output left
+bindsym $mod+Shift+l move workspace to output right
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -131,8 +134,7 @@ for_window [class="EpicGamesLauncher"] floating enable
 
 # Autostart
 # Autostart applications
-exec feh --bg-max ~/Bilder/Wallpapers/wallhaven-747309.jpg   
-#exec ~/.custom/bg_script.sh
+exec ~/.custom/bg_script.sh
 exec thunderbird
 exec $editor
 
@@ -228,5 +230,4 @@ bar {
 	#colors {
 	#        background         $transparent
 	#}
-	
 }
