@@ -24,7 +24,7 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=/usr/lib/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -33,6 +33,7 @@ markup=none
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
+
 [volume]
 #label=VOL
 label=♪
@@ -83,11 +84,12 @@ instance=/home
 interval=30
 color=#d9534f
 
-[battery]
+[battery2]
 #label=BAT
-label=⚡
+#label=⚡
+markup=pango
 #instance=1
-interval=30
+interval=10
 
 [iface]
 #instance=wlan0
@@ -95,10 +97,10 @@ color=#00FF00
 interval=10
 separator=true
 
-#[wifi]
-#instance=wlp3s0
-#interval=10
-#separator=true
+[wifi]
+instance=wlp59s0
+interval=10
+separator=true
 
 #[bandwidth]
 #instance=eth0
@@ -156,12 +158,3 @@ interval=5
 #
 # bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 # bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#instance=CAPS
-#interval=once
-#signal=11
-
-#[keyindicator]
-#instance=NUM
-#interval=once
-#signal=11
