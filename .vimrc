@@ -11,6 +11,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'lervag/vimtex'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
 set encoding=utf-8
@@ -24,6 +25,8 @@ let g:ycm_key_list_previous_completion = ['<S-tab>', '<Up>']
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+let g:tex_flavor = "latex"
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
