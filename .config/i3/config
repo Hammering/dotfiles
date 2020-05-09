@@ -173,6 +173,11 @@ bindsym $mod+w workspace $WS7
 bindsym $mod+e workspace $WS8
 bindsym $mod+r workspace $WS9
 bindsym $mod+t workspace $WS10
+bindsym $mod+6 workspace $WS11
+bindsym $mod+7 workspace $WS12
+bindsym $mod+8 workspace $WS13
+bindsym $mod+9 workspace $WS14
+bindsym $mod+0 workspace $WS15
 
 # move focused container to workspace
 bindsym $mod+$key1+1 move container to workspace $WS1
@@ -185,6 +190,11 @@ bindsym $mod+$key1+w move container to workspace $WS7
 bindsym $mod+$key1+e move container to workspace $WS8
 bindsym $mod+$key1+r move container to workspace $WS9
 bindsym $mod+$key1+t move container to workspace $WS10
+bindsym $mod+$key1+6 move container to workspace $WS11
+bindsym $mod+$key1+7 move container to workspace $WS12
+bindsym $mod+$key1+8 move container to workspace $WS13
+bindsym $mod+$key1+9 move container to workspace $WS14
+bindsym $mod+$key1+0 move container to workspace $WS15
 
 # reload the configuration file
 bindsym $mod+$key1+z reload
