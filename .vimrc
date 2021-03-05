@@ -12,6 +12,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'lervag/vimtex'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 
 set encoding=utf-8
