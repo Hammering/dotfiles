@@ -72,15 +72,22 @@ color=#7ea1a5
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-#label=SSD
+label=root: 
 instance=/
 interval=30
 color=#d9534f
 separator=false
 
 [disk]
-#label=HOME
+label=HOME: 
 instance=/home
+interval=30
+color=#d9534f
+separator=false
+
+[disk]
+label=Games: 
+instance=/mnt/gamedrive
 interval=30
 color=#d9534f
 

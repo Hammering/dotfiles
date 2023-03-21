@@ -8,7 +8,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $editor termite
+set $editor alacritty 
 set $key1 Mod1
 
 set $black       #212121
@@ -71,7 +71,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+y focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+u focus child
 
 # enter fullscreen mode for the focused container
 bindsym $mod+n fullscreen toggle
@@ -122,7 +122,7 @@ bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+o exec --no-startup-id rofi -show ssh 
 
 #Open applications on specific workspace
-assign [class="Thunderbird"] $WS9
+assign [class="thunderbird"] $WS9
 assign [class="qBittorrent"] $WS8
 assign [class="Steam"] $WS5
 
