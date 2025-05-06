@@ -8,7 +8,15 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 output HDMI-A-1 transform 90
 output DP-2 transform 90
-input type:keyboard xkb_numlock enabled
+input type:keyboard {
+  # replace these with a dedicated xkb file, see man sway-input
+  xkb_layout us
+  xkb_variant altgr-intl
+  xkb_numlock enabled
+}
+
+exec mako
+exec waybar
 
 set $mod Mod4
 set $editor alacritty 
@@ -144,9 +152,9 @@ bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+o exec --no-startup-id rofi -show ssh 
 
 #Open applications on specific workspace
-assign [class="thunderbird"] $WS9
-assign [class="qBittorrent"] $WS8
-assign [class="Steam"] $WS5
+assign [app_id="thunderbird"] $WS9
+assign [class="org.qbittorrent.qBittorrent"] $WS8
+assign [class="steam"] $WS5
 
 #Open applications in floating mode
 for_window [title="File Transfer*"] floating enable
@@ -255,11 +263,11 @@ bindsym $mod+i mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3blocks
-	position top
+#bar {
+#        status_command waybar
+#	position top
 	#separator_symbol "|"
 	#colors {
 	#        background         $transparent
 	#}
-}
+#}
