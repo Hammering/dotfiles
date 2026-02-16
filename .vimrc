@@ -2,10 +2,13 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'Valloric/YouCompleteMe'
+" Plugin manager
+Plugin 'VundleVim/Vundle.vim'
+" Snippets and completion
+Plugin 'valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'w0rp/ale'
 Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/nerdtree'
@@ -15,6 +18,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-surround'
 call vundle#end()
 
 set encoding=utf-8
