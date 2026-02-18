@@ -5,22 +5,30 @@ call vundle#begin()
 " Plugin manager
 Plugin 'VundleVim/Vundle.vim'
 " Snippets and completion
-Plugin 'valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'w0rp/ale'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
-Plugin 'w0rp/ale'
-Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
-Plugin 'lervag/vimtex'
-Plugin 'tpope/vim-fugitive'
+Plugin 'mbbill/undotree'
+
+Plugin 'tpope/vim-sensible'
 Plugin 'vim-airline/vim-airline'
+
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-speeddating'
+
+Plugin 'lervag/vimtex'
+Plugin 'nvie/vim-flake8'
+Plugin 'plasticboy/vim-markdown'
 call vundle#end()
 
 set encoding=utf-8
