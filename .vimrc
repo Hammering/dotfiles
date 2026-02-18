@@ -47,10 +47,14 @@ let g:tex_flavor = "latex"
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python' : ['black', 'autopep8'],
 \}
+
+let g:ale_python_flake8_options = '--ignore=E501,E265,E302,E303'
 
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTree<CR>
+nnoremap <F5> :UndotreeToggle<CR>
 
 filetype plugin on
 filetype indent on
