@@ -10,6 +10,7 @@ require("conf/input")
 require("conf/keybinds")
 require("conf/window-rules")
 require("conf/permissions")
+require("conf/workspaces")
 
 return true
 
