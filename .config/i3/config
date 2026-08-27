@@ -96,7 +96,8 @@ font pango:DejaVu Sans Mono 8
 # start a terminal
 bindsym $mod+Return exec $editor 
 bindsym $mod+p exec passmenu
-bindsym $mod+Shift+Return exec firefox
+bindsym $mod+Shift+Return exec librewolf 
+#bindsym $mod+Shift+Return exec firefox
 bindsym Print exec ~/.custom/screenshot.sh
 
 # kill focused window
@@ -105,7 +106,7 @@ bindsym $mod+c kill
 # Increse/Decrese backlight
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsyn XF86PowerOff exec 
+#bindsym XF86PowerOff exec 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
