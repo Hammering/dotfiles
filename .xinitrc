@@ -8,5 +8,6 @@ xrandr --output DisplayPort-2 --mode 2560x1440  --primary --right-of HDMI-A-0 --
 picom &
 redshift &
 /usr/lib/notify-osd/notify-osd &
+dbus-update-activation-environment --systemd DISPLAY
 exec i3
 
